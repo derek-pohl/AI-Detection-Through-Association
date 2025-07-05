@@ -1,0 +1,135 @@
+/* General Body Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #121212; /* Dark background for a modern look */
+    color: #EAEAEA;
+    height: 100%;
+}
+
+/* Main Container */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+/* Main Content Layout */
+.main-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* Left side (text input) is twice as large as the right side (result) */
+    gap: 2rem;
+    width: 100%;
+    max-width: 1400px;
+    background-color: #1E1E1E; /* Slightly lighter dark shade for the content area */
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Deeper shadow for a floating effect */
+}
+
+/* Header Section */
+.header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: #FFFFFF;
+}
+
+.header p {
+    font-size: 1.1rem;
+    font-weight: 300;
+    color: #B0B0B0; /* Lighter grey for subheading */
+    margin-bottom: 1.5rem;
+}
+
+/* Text Input Area */
+.text-input-section textarea {
+    width: 100%;
+    height: 400px; /* Ample height for text input */
+    background-color: #252525; /* Darker input field */
+    border: 1px solid #333333; /* Subtle border */
+    border-radius: 10px;
+    padding: 1rem;
+    color: #EAEAEA;
+    font-size: 1rem;
+    font-family: 'Roboto', sans-serif;
+    resize: none; /* Disable resizing */
+    box-sizing: border-box;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.text-input-section textarea:focus {
+    outline: none;
+    border-color: #007BFF; /* Highlight color on focus */
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.3);
+}
+
+/* Button Container */
+.button-container {
+    text-align: right; /* Align button to the right */
+    margin-top: 1rem;
+}
+
+/* Check Button */
+.check-button {
+    background-color: #007BFF;
+    color: #FFFFFF;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.check-button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px); /* Slight lift on hover */
+}
+
+.check-button:active {
+    background-color: #004494;
+    transform: translateY(0);
+}
+
+/* Result Section */
+.result-section {
+    background-color: #252525; /* Consistent dark theme for the result area */
+    padding: 2rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.result-header h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #FFFFFF;
+}
+
+.result-content p {
+    font-size: 1rem;
+    font-weight: 300;
+    color: #B0B0B0;
+    line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .main-content {
+        grid-template-columns: 1fr; /* Stack the sections on smaller screens */
+    }
+
+    .text-input-section textarea {
+        height: 300px; /* Adjust height for smaller screens */
+    }
+}

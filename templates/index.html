@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Text Detector</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.svg') }}" type="image/svg+xml">
+</head>
+<body>
+    <div class="container">
+        <div class="main-content">
+            <div class="text-input-section">
+                <div class="header">
+                    <h1>AI Text Detector</h1>
+                    <p>Enter the text you want to analyze in the box below.</p>
+                </div>
+                <textarea placeholder="Start typing or paste your text here..."></textarea>
+                <div class="button-container">
+                    <button class="check-button">Check Text</button>
+                </div>
+            </div>
+            <div class="result-section">
+                <div class="result-header">
+                    <h2>Analysis Result</h2>
+                </div>
+                <div class="result-content">
+                    <p>The analysis of your text will be displayed here.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
