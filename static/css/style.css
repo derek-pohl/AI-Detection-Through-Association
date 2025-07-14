@@ -116,6 +116,10 @@ body, html {
     color: #FFFFFF;
 }
 
+.result-content {
+    text-align: left;
+}
+
 .result-content p {
     font-size: 1rem;
     font-weight: 300;
