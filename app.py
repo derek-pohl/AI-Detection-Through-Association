@@ -2,10 +2,19 @@ import os
 import google.generativeai as genai
 from flask import Flask, render_template, request, jsonify
 from dotenv import load_dotenv
+from flask_limiter import Limiter
+from flask_limiter.util import get_remote_address
 
 load_dotenv()
 
 app = Flask(__name__)
+
+# Set up rate limiting (e.g., 5 requests per minute per IP)
+limiter = Limiter(
+    get_remote_address,
+    app=app,
+    default_limits=["5 per minute"]
+)
 
 # Configure the Gemini API
 genai.configure(api_key=os.environ["GOOGLE_API_KEY"])
@@ -16,6 +25,7 @@ def index():
     return render_template('index.html')
 
 @app.route('/analyze', methods=['POST'])
+@limiter.limit("5 per minute")  # Optional: override or reinforce per-endpoint limit
 def analyze():
     try:
         user_text = request.json['text']
