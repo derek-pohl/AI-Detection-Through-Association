@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How It Works - AI Text Detector</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.svg') }}" type="image/svg+xml">
+</head>
+<body class="how-it-works-page">
+    <div class="container">
+        <div class="main-content">
+            <div class="header">
+                <h1>How It Works & Compares to Other Detectors</h1>
+            </div>
+            <div class="content">
+                <p>
+                    Traditional AI detectors often analyze writing style—looking at sentence structure, word choice, and predictability (perplexity). While effective, these methods can sometimes be circumvented by more advanced AI or misclassify human writing that happens to be simple or formulaic.
+                </p>
+                <p>
+                    This tool takes a different approach by focusing on the <strong>ideas</strong> within the text.
+                </p>
+                <h3>The "Association" Method</h3>
+                <p>
+                    When a topic is given, both humans and AI draw from a well of associated concepts. However, the "shape" of this well is different for each. AI, trained on vast datasets, tends to retrieve the most common and statistically likely associations. Humans, with their unique experiences and memories, often make more varied or unexpected connections.
+                </p>
+                <p>
+                    <strong>Example:</strong> When asked about the Industrial Revolution, AI might consistently mention steam engines, factory conditions, and urbanization. A human might focus on specific regional impacts, personal family stories, or lesser-known historical details. If a submitted text shares more ideas that often pop up in AI generated text, it too may be AI generated.
+                </p>
+                <p>
+                    By comparing the core ideas of a submitted text to a freshly-generated AI text on the same topic, we can measure the conceptual overlap. A high degree of overlap suggests that the text likely originated from a similar "thought" process as the AI, indicating a higher probability of it being AI-generated.
+                </p>
+                <a href="/" class="back-link">Back to Detector</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

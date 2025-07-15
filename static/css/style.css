@@ -39,6 +39,16 @@ body, html {
     color: #FFFFFF;
 }
 
+.header h1 a {
+    color: #007BFF;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+.header h1 a:hover {
+    text-decoration: underline;
+}
+
 .header p {
     font-size: 1.1rem;
     font-weight: 300;
@@ -127,6 +137,30 @@ body, html {
     line-height: 1.6;
 }
 
+.content {
+    background-color: #1E1E1E;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    margin-top: 2rem;
+}
+
+.content p, .content h3 {
+    color: #EAEAEA;
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 1rem;
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
 /* Responsive Design */
 @media (max-width: 992px) {
     .main-content {
@@ -136,4 +170,10 @@ body, html {
     .text-input-section textarea {
         height: 300px; /* Adjust height for smaller screens */
     }
+}
+
+/* How It Works Page Specific Styles */
+.how-it-works-page .main-content {
+    grid-template-columns: 1fr; /* Single column layout */
+    max-width: 800px; /* More readable width for text */
 }

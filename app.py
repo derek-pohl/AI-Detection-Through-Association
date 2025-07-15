@@ -24,6 +24,10 @@ model = genai.GenerativeModel('gemini-2.0-flash-lite')
 def index():
     return render_template('index.html')
 
+@app.route('/how-it-works')
+def how_it_works():
+    return render_template('how-it-works.html')
+
 @app.route('/analyze', methods=['POST'])
 @limiter.limit("5 per minute")  # Optional: override or reinforce per-endpoint limit
 def analyze():
