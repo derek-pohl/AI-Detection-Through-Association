@@ -18,7 +18,7 @@ limiter = Limiter(
 
 # Configure the Gemini API
 genai.configure(api_key=os.environ["GOOGLE_API_KEY"])
-model = genai.GenerativeModel('gemini-2.0-flash-lite')
+model = genai.GenerativeModel('gemini-2.5-flash')
 
 @app.route('/')
 def index():
