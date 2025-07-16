@@ -42,7 +42,7 @@ body, html {
 .header h1 a {
     color: #007BFF;
     text-decoration: none;
-    font-size: 1.5rem;
+    font-size: 2.5rem; /* Adjusted to match h1 font size */
 }
 
 .header h1 a:hover {
